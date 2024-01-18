@@ -9,8 +9,9 @@ const {
   changePassword,
   forgotPassword,
   resetPassword,
+  updatePhoto,
 } = require("../controllers/userController");
-const protect = require("../middleware/authMiddleware");
+const { protect } = require("../middleware/authMiddleware");
 
 const router = express.Router();
 
@@ -24,5 +25,6 @@ router.patch("/updateuser", protect, updateUser);
 router.patch("/changepassword", protect, changePassword);
 router.post("/forgotpassword", forgotPassword);
 router.put("/resetpassword/:resetToken", resetPassword);
+router.patch("/updatephoto", protect, updatePhoto);
 
 module.exports = router;

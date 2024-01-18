@@ -23,6 +23,12 @@ const userSchema = mongoose.Schema(
       minLength: [6, "Password must be opt to 6 characters"],
       // maxLength: [23, "Password must not be more than 23 characters"],
     },
+    role: {
+      type: String,
+      required: [true],
+      default: "customer",
+      enum: ["customer", "admin"],
+    },
     photo: {
       type: String,
       required: [true, "Please add a photo"],
