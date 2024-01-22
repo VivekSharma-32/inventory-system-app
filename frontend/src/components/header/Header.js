@@ -76,13 +76,13 @@ const Header = () => {
           </ul>
           <div className={styles["header-right"]}>
             <span className={styles.links}>
-              <NavLink to={"/login"} className={activeLink}>
+              <NavLink to={"login"} className={activeLink}>
                 Login
               </NavLink>
-              <NavLink to={"/register"} className={activeLink}>
+              <NavLink to={"register"} className={activeLink}>
                 Register
               </NavLink>
-              <NavLink to={"/order-history"} className={activeLink}>
+              <NavLink to={"order-history"} className={activeLink}>
                 My Orders
               </NavLink>
             </span>
