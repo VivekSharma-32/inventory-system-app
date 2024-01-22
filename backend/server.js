@@ -7,6 +7,8 @@ const userRoutes = require("./src/routes/userRoutes");
 const productRoutes = require("./src/routes/productRoutes");
 const errorHandler = require("./src/middleware/errorMiddleware");
 const cookieParser = require("cookie-parser");
+
+// rest object
 const app = express();
 
 // middlewares
@@ -14,7 +16,12 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: ["http://localhost:3000"],
+    credentials: true,
+  })
+);
 
 // Routes middleware
 app.use("/api/users", userRoutes);
