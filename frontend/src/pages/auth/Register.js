@@ -58,7 +58,7 @@ const Register = () => {
 
   useEffect(() => {
     if (isSuccess && isLoggedIn) {
-      navigate("/");
+      navigate("/login");
     }
     dispatch(RESET_AUTH());
   }, [isSuccess, isLoggedIn, dispatch, navigate]);
@@ -100,7 +100,7 @@ const Register = () => {
                 onChange={handleInputChange}
               />
               <button type="submit" className="--btn --btn-primary --btn-block">
-                Login
+                Register
               </button>
             </form>
             <span className={styles.register}>
